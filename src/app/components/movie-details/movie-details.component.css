@@ -1,0 +1,38 @@
+.main {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.back-btn {
+    padding: 8px;
+    background-color: white;
+    margin: 10px
+}
+
+.movie-content {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 12px;
+}
+
+.movie-detail {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 2px;
+    margin: 1px;
+    background-color: rgb(49, 50, 51);
+}
+
+.movie-detail span {
+    padding: 10px;
+}
+
+.movie-detail p {
+    display: inline;
+    margin-left: 5px;
+}
+
+.movie-detail p>p::after {
+    content: ',';
+}

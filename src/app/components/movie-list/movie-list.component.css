@@ -1,0 +1,31 @@
+.movie {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    padding: 6px;
+    margin-bottom: 6px;
+}
+
+.title {
+    margin-inline: 0;
+    margin-block: 6px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.button {
+    display: inline-block;
+    background: rgb(75, 117, 75);
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+}

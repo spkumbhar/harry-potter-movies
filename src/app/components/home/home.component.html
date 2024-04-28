@@ -1,0 +1,17 @@
+<div class="main">
+    <div class="input-filter">
+        <h3>Filters</h3>
+        <label>Title <input type="text" [(ngModel)]="filterByTitleInput" (input)="filterByTitle()" /></label>
+        <label>
+      Release year<input type="text" [(ngModel)]="filterByDateInput" (input)="filterByReleaseDate()" />
+    </label>
+    </div>
+    @if (movies | async; as movies) { @if (movies.length) { @for (movie of movies; track movie.id) {
+
+    <app-movie-list [movie]="movie"></app-movie-list>
+    } } @else { @if (stillSearching) {
+    <p>Please change search criteria, no movies found to your search.</p>
+    } @else {
+    <p>There are no movies listed.</p>
+    } } }
+</div>

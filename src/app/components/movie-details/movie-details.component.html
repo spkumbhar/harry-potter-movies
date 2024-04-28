@@ -1,0 +1,46 @@
+<div class="main">
+    <a class=back-btn [routerLink]="['/']">Go Back</a> @if (movie) {
+    <h3 class="movie-title">{{ movie.title }}</h3>
+    <div class="movie-content">
+        <div>
+            <img [alt]="movie.title" [src]="movie.poster" />
+        </div>
+        <div>
+            <p><strong>Description:</strong> {{ movie.summary }}</p>
+        </div>
+    </div>
+    <h4>Details</h4>
+    <div class="movie-details">
+
+        <div class="movie-detail">
+            <span>Box office</span>
+            <span> {{ movie.box_office | million }} </span>
+        </div>
+        <div class="movie-detail">
+            <span>Budget</span>
+            <span>{{ movie.budget | million }}</span>
+        </div>
+        <div class="movie-detail">
+            <span>Duration</span>
+            <span>{{ movie.duration | duration }}</span>
+        </div>
+        <div class="movie-detail">
+            <span>Producers</span>
+            <p class="lists">
+                @for (producer of movie.producers; track producer) {
+                <p>{{ producer }}</p> }
+            </p>
+        </div>
+        <div class="movie-detail">
+            <span>Cinematographers</span>
+            <p class="lists">
+                @for (cinematographer of movie.cinematographers; track cinematographer) {
+                <p>{{ cinematographer }}</p> }
+            </p>
+        </div>
+    </div>
+    } @else {
+    <p> Movie is not found, please go back and search again.
+    </p>
+    }
+</div>
